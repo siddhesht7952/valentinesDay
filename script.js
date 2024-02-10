@@ -65,7 +65,7 @@ function yesClick() {
 
 	videoTag.play();
 
-	perfect.volume = 0.4;
+	perfect.volume = 0.7;
 	perfect.play();
 }
 
