@@ -26,29 +26,36 @@ function playYesSound() {
 
 yesBtn.addEventListener("click", playYesSound);
 
-yesBtn.addEventListener("click", yesClick);
-
 function yesClick() {
 	let imgContainer = document.getElementById("imgDiv");
 	let pandaImg = document.getElementById("panda");
+	let question = document.getElementsByClassName("quest")[0];
+	let para = document.getElementsByClassName("para")[0];
 	let btnCont =  document.getElementsByClassName("button--container")[0];
 
 	pandaImg.remove();
 
-	let imgElement = document.createElement("img")
-
-	imgElement.className = "img1";
-	imgElement.src = "img1.jpg";
-
-	imgContainer.append(imgElement);
-
 	noBtn.remove();
 	yesBtn.remove();
+	question.remove();
 
+	para.innerText = "Hope to spend some time with you on Valentine's day🥹 \nI love you sweetheart!😚❤️❤️ ";
 
-	let imgElement2 = document.createElement("img")
-	imgElement2.className = "excited";
-	imgElement2.src = "excited.gif";
-	imgElement2.style.width = "10vw";
-	btnCont.append(imgElement2);
+	let gif = document.createElement("img")
+	gif.className = "excited";
+	gif.src = "excited.gif";
+	gif.style.width = "10vw";
+	btnCont.append(gif);
+
+	// let videoTag =  document.createElement("video");
+	// let videoSrc = document.createElement("source");
+	// videoSrc.src = "2012-09-07-485.mp4";
+	// videoSrc.type = "video/mp4";
+	// videoTag.style.width = "100px";
+	// videoTag.append(videoSrc);
+	// imgContainer.append(videoTag);
+
+	// videoTag.play();
 }
+
+yesBtn.addEventListener("click", yesClick);
