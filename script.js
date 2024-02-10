@@ -2,6 +2,7 @@ let noBtn = document.getElementById("no");
 let yesBtn = document.getElementById("yes");
 let noAudio = new Audio("noAudio3.mp3");
 let yesAudio = new Audio("Happy happy happy2.mp3");
+let perfect = new Audio("Ed Sheeran - Perfect.mp3")
 
 //randomly moving the no button in clicking
 function rndmMove() {
@@ -35,6 +36,7 @@ function yesClick() {
 
 	pandaImg.remove();
 
+	//removing the buttons
 	noBtn.remove();
 	yesBtn.remove();
 	question.remove();
@@ -44,18 +46,27 @@ function yesClick() {
 	let gif = document.createElement("img")
 	gif.className = "excited";
 	gif.src = "excited.gif";
-	gif.style.width = "10vw";
 	btnCont.append(gif);
 
-	// let videoTag =  document.createElement("video");
-	// let videoSrc = document.createElement("source");
-	// videoSrc.src = "2012-09-07-485.mp4";
-	// videoSrc.type = "video/mp4";
-	// videoTag.style.width = "100px";
-	// videoTag.append(videoSrc);
-	// imgContainer.append(videoTag);
+	let videoTag =  document.createElement("video");
+	let videoSrc = document.createElement("source");
+	
+	// videoSrc attributes
+	videoSrc.src = "vday video.mp4";
+	videoSrc.type = "video/mp4";
 
-	// videoTag.play();
+	// videoTag attributes
+	videoTag.className = "video";
+	videoTag.autoplay = true;
+	videoTag.loop = true;
+
+	videoTag.append(videoSrc);
+	imgContainer.append(videoTag);
+
+	videoTag.play();
+
+	perfect.volume = 0.4;
+	perfect.play();
 }
 
 yesBtn.addEventListener("click", yesClick);
