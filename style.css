@@ -99,24 +99,24 @@ body{
 	#main--container {
 		display: grid;
 		margin: 2vw 2vw;
-    	grid-template-rows: 1fr;
-    	grid-template-columns: 2fr;
+    		grid-template-rows: 1fr;
+    		grid-template-columns: 2fr;
 	}
 
 	#panda {
-    	width: 41vw;
-    	grid-column-start: 1;
+    		width: 41vw;
+    		grid-column-start: 1;
 	}
 
 	.content {
 		grid-column-start: 2;
-    	margin: auto 0;
-    	width: 47vw;
+    		margin: auto 0;
+    		width: 47vw;
 	}
 
 	.para {
-    	font-size: 1.7vw;
-    	width: 90%;
+    		font-size: 1.7vw;
+    		width: 90%;
 	}
 
 	.quest {
@@ -128,34 +128,35 @@ body{
 	}
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 980px) {
 	#imgDiv {
-    	grid-row-start: 1;
+    		grid-row-start: 1;
 	}
 
 	.content {
+		grid-column-start: 1;
 		grid-row-start: 2;
-    	margin: auto;
-    	width: 90vw;
-    	display: flex;
-    	flex-direction: column;
+    		margin: auto;
+    		width: 90vw;
+    		display: flex;
+    		flex-direction: column;
 	}
 
 	.para {
-    	font-size: 2.7vw;
+    		font-size: 2.7vw;
 	}
 
 	.quest {
-    	font-size: 6.3vw;
+    		font-size: 6.3vw;
 	}
 
 	.button--container button {
 		padding: 25px 55px;
-    	border-radius: 20px;
-    	font-size: 4vw;
+    		border-radius: 20px;
+    		font-size: 4vw;
 	}
 
 	#panda {
-    	width: 71vw;
+    		width: 70vw;
     }
 }
